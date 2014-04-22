@@ -116,3 +116,10 @@ class Hook(Resource):
 
     def __str__(self):
         return '<Hook (%s)>' % getattr(self, 'name', '')
+
+class Release(Resource):
+
+    _dates = ('created_at', 'published_at')
+
+    def __str__(self):
+        return '<Release (%s)>' % getattr(self, 'name', '')
