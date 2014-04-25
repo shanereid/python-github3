@@ -23,7 +23,7 @@ class Create(Request):
     resource = Release
     body_schema = {
         'schema': ('tag_name', 'target_commitish', 'name', 'body', 'draft', 'prerelease'),
-        'required': ('tag_name'),
+        'required': ('tag_name',),
     }
 
 
