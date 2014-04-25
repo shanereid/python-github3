@@ -132,3 +132,10 @@ class Release(Resource):
 
     def __str__(self):
         return '<Release (%s)>' % getattr(self, 'name', '')
+
+class Content(Resource):
+
+    _dates = ('created_at', 'published_at')
+
+    def __str__(self):
+        return '<Content (%s)>' % getattr(self, 'name', '')
