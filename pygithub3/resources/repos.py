@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 
 from pygithub3.core.compat import OrderedDict
@@ -116,6 +115,16 @@ class Hook(Resource):
 
     def __str__(self):
         return '<Hook (%s)>' % getattr(self, 'name', '')
+
+
+class Status(Resource):
+
+    _dates = ('created_at', 'updated_at')
+    _maps = {'creator': User}
+
+    def __str__(self):
+        return '<Status (%s)>' % getattr(self, 'state', '')
+
 
 class Release(Resource):
 
