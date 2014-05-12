@@ -39,4 +39,5 @@ setup(
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
     ),
+    zip_safe=True
 )
